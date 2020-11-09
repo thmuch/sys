@@ -19,11 +19,12 @@
 			projectDirPath = "";
 			targets = (
 				130F8B90001BDF0A11CA292A,
+				05469EBF06D38D8E00A5BD78,
 			);
 		};
 		00E6828FFEC88D1A11DB9C8B = {
 			children = (
-				010341B7FEEF030011DB9C8B,
+				05E4A7B906EE022600A2F290,
 				05746266057CA50500588895,
 				0120612AFEC8923411DB9C8B,
 			);
@@ -68,14 +69,105 @@
 //052
 //053
 //054
-		0511A4B9057CD1D9008929A7 = {
+		0501F06806EF54D70085162B = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Java14Handler.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0501F06906EF54D70085162B = {
+			fileRef = 0501F06806EF54D70085162B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		0501F07F06EF55E00085162B = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Java14Adapter.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0501F08006EF55E00085162B = {
+			fileRef = 0501F07F06EF55E00085162B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		0501F0B106EF59450085162B = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Java14Integration.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0501F0B206EF59450085162B = {
+			fileRef = 0501F0B106EF59450085162B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		05469EBC06D38D1F00A5BD78 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Mac.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05469EBD06D38D1F00A5BD78 = {
+			fileRef = 05469EBC06D38D1F00A5BD78;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		05469EBE06D38D8E00A5BD78 = {
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
 			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "javadoc -sourcepath \"${BUILD_FILES_DIR}\" -d \"${BUILT_PRODUCTS_DIR}/docs\" -verbose -version -author Sys.java";
+			shellScript = "javadoc -sourcepath \"${BUILD_FILES_DIR}\" -d \"${BUILT_PRODUCTS_DIR}/docs\" -verbose -version -author *.java";
+		};
+		05469EBF06D38D8E00A5BD78 = {
+			buildPhases = (
+				05469EBE06D38D8E00A5BD78,
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Javadoc;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				05469EC106D38D9500A5BD78,
+			);
+			isa = PBXAggregateTarget;
+			name = Javadoc;
+			productName = Javadoc;
+		};
+		05469EC006D38D9500A5BD78 = {
+			containerPortal = 00E6828EFEC88D1A11DB9C8B;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 130F8B90001BDF0A11CA292A;
+			remoteInfo = Sys;
+		};
+		05469EC106D38D9500A5BD78 = {
+			isa = PBXTargetDependency;
+			target = 130F8B90001BDF0A11CA292A;
+			targetProxy = 05469EC006D38D9500A5BD78;
 		};
 		05746266057CA50500588895 = {
 			fileEncoding = 30;
@@ -84,6 +176,73 @@
 			path = Manifest;
 			refType = 4;
 			sourceTree = "<group>";
+		};
+		05E4A7B906EE022600A2F290 = {
+			children = (
+				010341B7FEEF030011DB9C8B,
+				05469EBC06D38D1F00A5BD78,
+				05E4A7BC06EE024000A2F290,
+			);
+			isa = PBXGroup;
+			name = com.muchsoft.util;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05E4A7BC06EE024000A2F290 = {
+			children = (
+				05E4A7D806EE02E700A2F290,
+				05E4A7D406EE028200A2F290,
+				05E4A7DC06EE032400A2F290,
+				0501F07F06EF55E00085162B,
+				0501F06806EF54D70085162B,
+				0501F0B106EF59450085162B,
+			);
+			isa = PBXGroup;
+			name = mac;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05E4A7D406EE028200A2F290 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Java13Handler.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05E4A7D506EE028200A2F290 = {
+			fileRef = 05E4A7D406EE028200A2F290;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		05E4A7D806EE02E700A2F290 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Java13Adapter.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05E4A7D906EE02E700A2F290 = {
+			fileRef = 05E4A7D806EE02E700A2F290;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		05E4A7DC06EE032400A2F290 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.java;
+			path = Java13Integration.java;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		05E4A7DD06EE032400A2F290 = {
+			fileRef = 05E4A7DC06EE032400A2F290;
+			isa = PBXBuildFile;
+			settings = {
+			};
 		};
 //050
 //051
@@ -100,7 +259,6 @@
 				130F8B91001BDF0A11CA292A,
 				130F8B93001BDF0A11CA292A,
 				130F8B94001BDF0A11CA292A,
-				0511A4B9057CD1D9008929A7,
 			);
 			buildSettings = {
 				JAVA_ARCHIVE_CLASSES = YES;
@@ -128,6 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				130F8B92001BDF0A11CA292A,
+				05469EBD06D38D1F00A5BD78,
+				05E4A7D506EE028200A2F290,
+				05E4A7D906EE02E700A2F290,
+				05E4A7DD06EE032400A2F290,
+				0501F06906EF54D70085162B,
+				0501F08006EF55E00085162B,
+				0501F0B206EF59450085162B,
 			);
 			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,8 +318,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		130F8B95001BDF0A11CA292A = {
-			buildRules = (
-			);
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -167,8 +330,6 @@
 			name = Development;
 		};
 		130F8B96001BDF0A11CA292A = {
-			buildRules = (
-			);
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -189,9 +350,8 @@
 //6A4
 		6A9ED92C02B0286D0CC91562 = {
 			explicitFileType = "compiled.mach-o.executable";
-			fallbackIsa = PBXFileReference;
 			includeInIndex = 0;
-			isa = PBXZipArchiveReference;
+			isa = PBXFileReference;
 			path = Sys.jar;
 			refType = 3;
 			sourceTree = BUILT_PRODUCTS_DIR;

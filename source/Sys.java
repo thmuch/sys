@@ -28,6 +28,8 @@ package com.muchsoft.util;
  * If you have any suggestions, bug reports or feature requests, let me know.
  * <p><b>Version History:</b></p>
  * <dl>
+ *   <dt> 2004-10-13
+ *   <dd> Added a new package, com.muchsoft.util.mac, and a new class, {@link Mac}.
  *   <dt> 2004-05-04
  *   <dd> isMacOSX() now matches <a href="http://developer.apple.com/technotes/tn2002/tn2110.html">http://developer.apple.com/technotes/tn2002/tn2110.html</a>
  *   <dt> 2003-12-02
@@ -35,16 +37,11 @@ package com.muchsoft.util;
  * </dl>
  *
  * @author Thomas Much
- * @version 2004-05-04
+ * @version 2004-10-13
  */
 
 public class Sys {
 
-/* TODO:
- *   incorporate transformation routines for file names (case, Unix dot-names etc.)
- *   is /etc really best choice? search www.linuxbase.org
- *   DesktopFolder, TempFolder?
- */
 
 private static final boolean ismacos;
 private static final boolean ismacosx;
@@ -119,7 +116,7 @@ static {
 
 
 
-protected Sys() {}
+private Sys() { }
 
 
 
@@ -269,7 +266,7 @@ public static String getJavaHome() {
 public static void main(String[] args) {
 
 	System.out.println();
-	System.out.println("** com.muchsoft.util.Sys version 2004-05-04");
+	System.out.println("** com.muchsoft.util.Sys version 2004-10-13");
 	System.out.println("**");
 	System.out.println("** JavaHome:   " + getJavaHome());
 	System.out.println("** AppWork:    " + getWorkingDirectory());
