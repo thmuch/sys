@@ -2,7 +2,7 @@
 
 Retro library from my outdated book ["Java für Mac OS X"](https://muchsoft.com/java/mac-java-buch.html).
 
-The `Sys` class lets you determine on which system your Java application is running.
+The [`Sys`](https://thmuch.github.io/sys/) class lets you determine on which system your Java application is running.
 Furthermore, it offers methods for cross-platform queries for paths such as the preferences folder.
 With this information, you can tune your applications for certain operating systems.
 
