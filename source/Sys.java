@@ -42,6 +42,14 @@ package com.muchsoft.util;
 
 public class Sys {
 
+/* TODO:
+ *   incorporate transformation routines for file names (case, Unix dot-names etc.)
+ *   is /etc really best choice? search www.linuxbase.org
+ *   DesktopFolder, TempFolder -> java.io.File.createTempFile()
+ *   URLDecoder.decode( getClass().getProtectionDomain().getCodeSource().getLocation().getPath() ) (???)
+ *   /Users/Shared, Library/Application Support
+ *   isWin95(), isWin98(), isWinME(), isWinXP(), isWin2000, isWinNT() -> 95/98, NT/ME/2000/XP
+ */
 
 private static final boolean ismacos;
 private static final boolean ismacosx;
