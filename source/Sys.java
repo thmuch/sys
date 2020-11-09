@@ -22,12 +22,20 @@ package com.muchsoft.util;
  * //...</pre>
  * <p>The latest Sys version can be found at
  * <a href="http://www.muchsoft.com/java/">http://www.muchsoft.com/java/</a>.
- * <p>Copyright 1998-2003 by Thomas Much, <a href="mailto:thomas@muchsoft.com">thomas@muchsoft.com</a>.
+ * <p>Copyright 1998-2004 by Thomas Much, <a href="mailto:thomas@muchsoft.com">thomas@muchsoft.com</a>.
  * <br>This class is free for commercial and non-commercial use,
  * as long as you do not distribute modified versions of the source code.
  * If you have any suggestions, bug reports or feature requests, let me know.
+ * <p><b>Version History:</b></p>
+ * <dl>
+ *   <dt> 2004-05-04
+ *   <dd> isMacOSX() now matches <a href="http://developer.apple.com/technotes/tn2002/tn2110.html">http://developer.apple.com/technotes/tn2002/tn2110.html</a>
+ *   <dt> 2003-12-02
+ *   <dd> First public release.
+ * </dl>
+ *
  * @author Thomas Much
- * @version 2003-12-02
+ * @version 2004-05-04
  */
 
 public class Sys {
@@ -58,7 +66,7 @@ static {
 	String vendor = System.getProperty("java.vendor");
 	String jhome  = System.getProperty("java.home");
 
-	ismacosx  = (vendor.indexOf("Apple") >= 0) && (osname.indexOf("Mac OS X") >= 0);
+	ismacosx  = osname.toLowerCase().startsWith("mac os x");
 	ismacos   = (!ismacosx) && ((vendor.indexOf("Apple") >= 0) || (osname.indexOf("Mac OS") >= 0));
 	islinux   = (osname.indexOf("Linux") >= 0);
 	iswindows = (osname.indexOf("Windows") >= 0);
@@ -254,13 +262,14 @@ public static String getJavaHome() {
  * This is a small test case for all the methods in this class.
  * On Mac OS X you can launch it by simply double-clicking the jar file (output goes to the Console).
  * On other systems, you can start it with <code>java -classpath .:Sys.jar com.muchsoft.util.Sys</code>
+ * (or <code>java -jar Sys.jar</code>)
  * @param args not used
  */
 
 public static void main(String[] args) {
 
 	System.out.println();
-	System.out.println("** com.muchsoft.util.Sys version 2003-12-02");
+	System.out.println("** com.muchsoft.util.Sys version 2004-05-04");
 	System.out.println("**");
 	System.out.println("** JavaHome:   " + getJavaHome());
 	System.out.println("** AppWork:    " + getWorkingDirectory());
@@ -297,6 +306,8 @@ public static void main(String[] args) {
 
 	System.out.println("**             " + System.getProperty("os.name"));
 	System.out.println("** Java:       " + System.getProperty("java.version"));
+	System.out.println("**             " + System.getProperty("java.runtime.version"));
+	System.out.println("**             " + System.getProperty("java.vm.version"));
 	System.out.println("**             " + System.getProperty("java.vendor"));
 	System.out.println("** MRJ:        " + System.getProperty("mrj.version"));
 	System.out.println();
